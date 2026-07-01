@@ -1,4 +1,8 @@
-# app-quarkus
+# ⚡ App Quarkus 🇧🇷
+
+![Java](https://img.shields.io/badge/Java-17-009C3B?style=flat&logo=openjdk&logoColor=white)
+![Quarkus](https://img.shields.io/badge/Quarkus-3.21-FFDF00?style=flat&logo=quarkus&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-002776?style=flat&logo=postgresql&logoColor=white)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -23,7 +27,7 @@ The application can be packaged using:
 ```
 
 It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+Be aware that it's not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
 The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
 
@@ -73,3 +77,6 @@ Generating Jakarta REST resources with Panache
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+---
+*Feito com 💚💛💙 — cores da bandeira do Brasil 🇧🇷*
