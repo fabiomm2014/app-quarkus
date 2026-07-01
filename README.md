@@ -1,75 +1,43 @@
-# app-quarkus
+# ⚡ App Quarkus 🇧🇷
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+![Java](https://img.shields.io/badge/Java-17-009C3B?style=flat&logo=openjdk&logoColor=white)
+![Quarkus](https://img.shields.io/badge/Quarkus-3.21-FFDF00?style=flat&logo=quarkus&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-002776?style=flat&logo=postgresql&logoColor=white)
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+Aplicacao Quarkus com REST endpoint e CRUD via Panache, gerada por code.quarkus.io.
 
-## Running the application in dev mode
+## Visao geral
 
-You can run your application in dev mode that enables live coding using:
+Projeto Quarkus 3.21.1 com dois recursos REST: um endpoint `/hello` (greeting) e um CRUD automatico de `MyEntity` via **Panache Entity Resource** (Hibernate ORM REST Data). Banco PostgreSQL via JDBC. Suporte a build nativo (GraalVM) e 4 Dockerfiles inclusos.
 
-```shell script
+## Tecnologias
+
+- **Java 17** / **Quarkus 3.21.1**
+- **Hibernate ORM + Panache** (REST Data auto-CRUD)
+- **RESTEasy + Jackson** (JSON)
+- **PostgreSQL** (JDBC)
+- **JUnit 5** + Rest Assured (testes)
+- **Maven** (wrapper incluso)
+- **Docker** (4 Dockerfiles: JVM, legacy-jar, native, native-micro)
+
+## Como executar
+
+```bash
+# Modo dev (hot-reload)
 ./mvnw quarkus:dev
-```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
-
-## Packaging and running the application
-
-The application can be packaged using:
-
-```shell script
+# Build JAR
 ./mvnw package
-```
+java -jar target/quarkus-app/quarkus-run.jar
 
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using:
-
-```shell script
+# Build nativo
 ./mvnw package -Dnative
+./target/app-quarkus-1.0.0-SNAPSHOT-runner
 ```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
+## Licenca
 
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
+Uso interno/educacional.
 
-You can then execute your native executable with: `./target/app-quarkus-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
-
-## Related Guides
-
-- REST resources for Hibernate ORM with Panache ([guide](https://quarkus.io/guides/rest-data-panache)): Generate Jakarta REST resources for your Hibernate Panache entities and repositories
-- REST Jackson ([guide](https://quarkus.io/guides/rest#json-serialisation)): Jackson serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it
-- JDBC Driver - PostgreSQL ([guide](https://quarkus.io/guides/datasource)): Connect to the PostgreSQL database via JDBC
-
-## Provided Code
-
-### REST Data with Panache
-
-Generating Jakarta REST resources with Panache
-
-[Related guide section...](https://quarkus.io/guides/rest-data-panache)
-
-
-### REST
-
-Easily start your REST Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+---
+*Feito com 💚💛💙 — cores da bandeira do Brasil 🇧🇷*
